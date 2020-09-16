@@ -2,12 +2,14 @@ extends layout
 
 block content   
     section.container
+         
         form(method="POST")
+            //- action="/bbs/write"가 생략된 형태이다
             div.form-group
-                input(name="b_title",placeholder="제목").form-control
+                input(name="b_title",placeholder="제목", value= bbsVO.b_title).form-control
             div.form-group
-                input(name="b_write",placeholder="작성자").form-control
+                input(name="b_write",placeholder="작성자", value= bbsVO.b_write).form-control
             div.form-group
-                input(name="b_text",placeholder="내용").form-control
+                input(name="b_text",placeholder="내용", value= bbsVO.b_text).form-control
             div.form-group
-                button.btn.btn-promary 전송    
+                button.btn.btn-primary 전송    
