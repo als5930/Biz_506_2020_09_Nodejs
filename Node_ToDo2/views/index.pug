@@ -5,16 +5,17 @@ block content
   script(src="/javascripts/todo_main.js")
   script.
     var todo_data = ""
-      todo_data = `!{todo_data}`// 전역으로 선언된 todo_data갓을 서버에서 받은 값으로 세팅
+      todo_data = `!{todo_data}`
   
-  script(src="/javascripts/todo_sub.js")
+  
   section.todo_main
     h1(id="main_title",onclick="main_title_click()") MY TODO LIST
     form(method="POST")
-      input(ytpe="text", name="todo",id="todo",placeholder="하고싶은일")
+      input(ytpe="text", name="t_text",id="todo",placeholder="하고싶은일")
       button(type="button",id="btn-save") save
 
     article.todo_list
-      button(id="btn-new") 새로고침
+      
       ul#todo_list
-        
+        each vo in todoList
+          li= vo.t_text
