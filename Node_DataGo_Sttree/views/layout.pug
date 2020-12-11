@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title 전국 가로수길
+    meta(charset='UTF-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/stt.css')
+  body
+    header
+      h1 전국 가로수길
+      p 대한민국 공공DB를 활용한 전국 가로수길 시스템
+    section.nav
+      form(action="/stt/sttree")
+        input.stt-input(type='text',name='sttree',
+        | placeholder='가로수길 이름 입력후 Enter...')
+    section.main
+      block content

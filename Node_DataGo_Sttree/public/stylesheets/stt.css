@@ -1,0 +1,39 @@
+table.stt {
+  border-collapse: collapse;
+  border-spacing: none;
+  width: 98%;
+  table-layout: fixed;
+  border: 1px solid #aaa;
+  margin: 2px auto;
+}
+
+table.stt th,
+table.stt td {
+  padding: 8px 12px;
+  text-align: left;
+  width: 10px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+table.stt th {
+  background-color: aqua;
+}
+
+table.stt tr:nth-child(odd) {
+  background-color: #eee;
+}
+table.stt tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+table.stt td:hover {
+  text-overflow: initial;
+  overflow: visible;
+  cursor: pointer;
+}
+table.stt tr:hover {
+  background-color: #ddd;
+}
